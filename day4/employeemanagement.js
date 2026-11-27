@@ -1,3 +1,4 @@
+let bonus;
 const employees = [
     {
         id: 1,
@@ -80,14 +81,28 @@ console.log(calculateTotalPayroll());
 
 function calculateBonus(employee){
     if (employee.performanceScore < 70){
-        bonus = 0
+        return bonus = 0
     } else if (employee.performanceScore < 79) {
-        bonus = employee.salary * 0.05;
+        return bonus = employee.salary * 0.05;
     } else if (employee.performanceScore < 89) {
-        bonus = employee.salary * 0.10;
+        return bonus = employee.salary * 0.10;
     } else {
-        bonus = employee.salary * 0.15;
+        return bonus = employee.salary * 0.15;
     }
 }
 
-console.log(calculateBonus(employee))
+console.log(calculateBonus( {
+        id: 1,
+        name: "Philip",
+        department: "IT",
+        salary: 60000,
+        performanceScore: 85
+    }));
+
+// Task 6 – Create a new employee salary report (15 marks)
+
+const increasedSalaries = employees.map(function(employee){
+    return employee.salary + bonus;
+});
+
+console.log(increasedSalaries);
