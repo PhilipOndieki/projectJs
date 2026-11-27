@@ -1,0 +1,62 @@
+Practical scenario: tenant rent arrears tracker
+
+You manage a rental unit. Rent is 20,000 KES per month. The tenant has a 12-month lease. You must track the tenant's balance each month.
+
+Payment history (the tenant's behaviour):
+
+Months 1 to 4: pays 20,000.
+Months 5 to 7: pays 12,000.
+Month 8: pays 0.
+Months 9 to 12: pays 25,000.
+
+Monthly steps. Do them in this order:
+
+If the balance is above 0, add a late fee. The fee is 5% of the balance carried from last month.
+Add the month's rent to the balance.
+Work out the month's payment from the history above.
+Subtract the payment from the balance.
+
+Notice rules. Check the balance after the payment:
+
+Balance is 0 or less: print Account clear.
+Balance is up to 20,000: print Reminder.
+Balance is up to 40,000: print Final notice.
+Balance is above 40,000: print Legal action warning.
+
+Your program must:
+
+Use a for loop for months 1 to 12.
+Use an if, else if and else chain for the payment history.
+Use a second if, else if and else chain for the notice.
+Print one line per month in this format:
+Month 6 | Fee: 400.00 | Paid: 12000 | Balance: 16400.00 | Reminder
+Print Half-year statement: total paid 104000 after months 6 and 12. Use the % operator. The number is the total paid so far.
+Track the highest balance and the month when it happened. Print both at the end.
+Count the months with Account clear. Print the count at the end.
+
+Rules:
+
+Use no functions and no arrays.
+Use const for values that never change. Use named constants for rent, late fee rate and notice limits.
+Use ===, not ==.
+Use toFixed(2) for the fee and the balance. Money values with decimals need it.
+Match the output format exactly.
+
+Before you code:
+
+Predict the balance after month 5. Then predict month 6.
+Write the order of the four monthly steps on paper. If you swap steps 1 and 2, the late fee changes.
+
+Checkpoints to test your code:
+
+Month 7 balance is 25220.00.
+Month 8 balance is 46481.00. This is the highest balance.
+The final balance is 34947.32.
+
+Self-check: Total rent charged is 240,000. Total paid is 216,000. Total late fees are the value you print in your program. Your formula must hold: charged + fees - paid = final balance. Add the total late fees to your output and test it.
+
+Hints:
+
+The payment chain needs range checks with &&. Review the matatu code.
+Month 8 has a payment of 0. Test that your balance still grows correctly.
+Declare your tracking variables before the loop. Variables declared inside the loop reset each month.

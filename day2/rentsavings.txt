@@ -1,0 +1,26 @@
+
+Practical scenario: rent monthlySaving plan
+
+You are saving for a rent deposit. The goal is 50,000 KES.
+
+In month 1, you save 3,000 KES.
+Each month, you save 500 KES more than the month before.
+
+Write a program that:
+
+Uses a while loop. The loop stops when the total saved reaches the goal or goes past it.
+Prints one line for each month. Example: Month 1: saved 3000, total 3000.
+Prints High saving month on the same month if that month's saving is more than 5,000 KES. Use if.
+Prints Quarter check on every third month. Use the % operator.
+Prints the number of months needed when the loop ends.
+
+Rules:
+
+Do not use functions or arrays. You have not covered them yet.
+Predict the answer before you code. How many months do you expect? Write your guess down.
+Take care with the loop. If the total never changes, the loop runs forever.
+
+Check your work:
+
+Month 1 must print a total of 3000.
+Check that the loop stops on the correct month. Test the edge case where the total is close to 50,000.

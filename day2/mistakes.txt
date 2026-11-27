@@ -1,0 +1,4 @@
+"5" + 2 gives "52". The + operator joins text when it meets a string.
+1 + 2 + "3" gives "33". Read from left to right. Do not change a traced answer without a reason.
+Check the edge values of every range. The night hour bug passed because the peak check ran first.
+Name every bug you fix. Say why the code was wrong.

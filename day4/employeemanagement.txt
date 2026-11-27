@@ -1,0 +1,153 @@
+Day 4 Practical Assessment
+Employee Management System
+100 marks
+Intermediate
+Practical coding
+
+Scenario: You have been hired to build a simple Employee Management System for a company. The system should store employee records, analyse salaries, identify departments and calculate payroll information.
+
+Your task is to build the system using JavaScript objects, arrays, functions and array methods.
+1. Starting data
+Use the following employee records:
+const employees = [
+    {
+        id: 1,
+        name: "Philip",
+        department: "IT",
+        salary: 60000,
+        performanceScore: 85
+    },
+    {
+        id: 2,
+        name: "Daniel",
+        department: "Finance",
+        salary: 45000,
+        performanceScore: 72
+    },
+    {
+        id: 3,
+        name: "Mary",
+        department: "IT",
+        salary: 70000,
+        performanceScore: 95
+    },
+    {
+        id: 4,
+        name: "John",
+        department: "HR",
+        salary: 35000,
+        performanceScore: 60
+    },
+    {
+        id: 5,
+        name: "Sarah",
+        department: "Finance",
+        salary: 55000,
+        performanceScore: 88
+    }
+];
+
+
+2. Your tasks
+Task 1 – Display all employees (10 marks)
+
+Use forEach() to display every employee's:
+- Name
+- Department
+- Salary
+Task 2 – Find an employee (10 marks)
+
+Create a function called findEmployee(employeeId).
+
+Requirements:
+- Accept an employee ID as a parameter.
+- Use find() to locate the employee.
+- Return the employee object if found.
+- If the employee does not exist, return "Employee not found".
+Task 3 – Filter employees by department (15 marks)
+
+Create a function called getEmployeesByDepartment(departmentName).
+
+Requirements:
+- Accept a department name.
+- Use filter() to identify employees in that department.
+- Return a new array containing matching employees.
+For example, searching for "IT" should return Philip and Mary.
+
+Task 4 – Calculate total payroll (15 marks)
+
+Create a function called calculateTotalPayroll().
+
+Requirements:
+- Use reduce().
+- Calculate the combined salaries of all employees.
+- Return the total payroll.
+Task 5 – Give employees performance bonuses (15 marks)
+
+Create a function called calculateBonus(employee).
+
+Bonus rules:
+Performance score	Bonus
+90 or above	15% of salary
+80–89	10% of salary
+70–79	5% of salary
+Below 70	No bonus
+
+The function must accept an employee object and return the bonus amount.
+
+Task 6 – Create a new employee salary report (15 marks)
+
+Use map() to create a new array containing each employee's:
+- Name
+- Department
+- Original salary
+- Calculated bonus
+- Total salary (original salary + bonus)
+Store the result in a variable called salaryReport.
+
+Important: Do not modify the original employee objects.
+
+Task 7 – Calculate average salary (10 marks)
+
+Create a function called calculateAverageSalary().
+
+Requirements:
+- Use reduce() to calculate total salaries.
+- Divide the total by the number of employees.
+- Return the average salary.
+Task 8 – Output your results (10 marks)
+
+Display:
+1. All employees.
+2. Employee with ID 3.
+3. All IT employees.
+4. Total payroll.
+5. Salary report.
+6. Average salary.
+
+3. Expected results
+Use these figures to check your calculations after completing the exercise.
+Calculation	Expected result
+Number of employees	5
+Total payroll	KSh 265,000
+Average salary	KSh 53,000
+IT employees	2
+Employee with ID 3	Mary
+
+Bonus calculations:
+Employee	Expected bonus
+Philip	KSh 6,000
+Daniel	KSh 2,250
+Mary	KSh 10,500
+John	KSh 0
+Sarah	KSh 5,500
+
+Total bonuses: KSh 24,250
+4. Assessment rules
+- Use the specified array methods.
+- Use functions for the required operations.
+- Use parameters rather than unnecessary global variables.
+- Do not hardcode calculated results.
+- Keep your code readable.
+- Do not modify the original employee records when generating the salary report.
+Total: 100 marks

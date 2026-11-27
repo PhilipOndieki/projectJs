@@ -1,0 +1,133 @@
+Day 3 — Advanced Practical Challenge 2
+Difficulty: Intermediate
+ 100 marks
+
+Project: E-commerce Order Processing System
+Scenario
+You are developing the backend logic for an e-commerce platform. The system must calculate customer payments, apply discounts, determine delivery charges, and decide whether an order qualifies for free delivery.
+
+Unlike the previous exercise, this challenge requires you to combine multiple functions, conditional logic, parameters, return values, and calculations.
+1. Given information
+Start with these variables:
+const customerName = "Philip";
+const orderAmount = 25000;
+const customerType = "premium";
+const hasCoupon = true;
+const couponCode = "SAVE2000";
+const deliveryDistance = 12;
+const paymentMethod = "mobile_money";
+
+
+2. Business requirements
+Task 1: Calculate membership discount
+
+Create a function declaration called calculateMembershipDiscount().
+
+It accepts:
+- Order amount
+- Customer type
+Rules:
+Customer type	Discount
+Premium	15%
+Regular	5%
+Guest	0%
+
+Return the discount amount.
+
+Task 2: Validate coupon
+
+Create a function expression called validateCoupon().
+
+It accepts:
+- Coupon code
+- Whether the customer has a coupon
+- Order amount
+Rules:
+- Coupon code must be "SAVE2000".
+- Customer must have a coupon.
+- Order amount must be at least KSh 10,000.
+Return true if all conditions are satisfied; otherwise return false.
+
+Task 3: Calculate coupon discount
+
+Create an arrow function called calculateCouponDiscount().
+
+It accepts the coupon validation result.
+
+Rules:
+- Valid coupon: KSh 2,000 discount.
+- Invalid coupon: KSh 0 discount.
+Return the applicable discount.
+
+Task 4: Calculate delivery fee
+
+Create a function declaration called calculateDeliveryFee().
+
+It accepts delivery distance and customer type.
+
+Rules:
+Condition	Delivery fee
+Premium customer	Free
+Regular or guest, distance up to 5 km	KSh 200
+Regular or guest, distance above 5 km and up to 15 km	KSh 400
+Regular or guest, distance above 15 km	KSh 700
+
+Return the delivery fee.
+
+Task 5: Calculate final payment
+
+Create a function expression called calculateFinalPayment().
+
+It accepts:
+- Order amount
+- Membership discount
+- Coupon discount
+- Delivery fee
+Return the final amount payable.
+
+Use this calculation:
+\[
+\text{Final Payment} =
+\text{Order Amount}
+-\text{Membership Discount}
+-\text{Coupon Discount}
++\text{Delivery Fee}
+\]
+
+Task 6: Payment confirmation
+
+Create an arrow function called confirmPayment().
+
+It accepts the payment method and final payment amount.
+
+Rules:
+- If the payment method is "mobile_money", return "Mobile Money Payment Selected".
+- If it is "card", return "Card Payment Selected".
+- Otherwise, return "Unsupported Payment Method".
+3. Final output
+Your program should display:
+Customer: Philip
+Customer Type: premium
+Original Order Amount: KSh 25000
+
+Membership Discount: KSh ...
+Coupon Valid: true
+Coupon Discount: KSh ...
+Delivery Fee: KSh ...
+Final Payment: KSh ...
+
+Payment Status: Mobile Money Payment Selected
+
+
+The ellipses are values your program must calculate.
+4. Technical requirements
+Your solution must:
+1. Use function declarations, function expressions, and arrow functions.
+2. Use parameters and arguments correctly.
+3. Use return rather than relying on console.log() inside calculation functions.
+4. Use conditional statements where appropriate.
+5. Store returned values in variables.
+6. Reuse the returned values when calling other functions.
+7. Avoid unnecessary global variables.
+8. Display the final results clearly.
+Important: Do not put the entire program inside one function. Each function should have one clear responsibility.

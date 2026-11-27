@@ -1,0 +1,74 @@
+Day 3 Practical Assessment: Employee Payroll Management System
+100 marks
+ Beginner to intermediate
+
+Scenario
+You have been hired to develop a simple payroll calculator for a company. The company wants a JavaScript program that calculates employees' salaries using reusable functions.
+
+You are given the following information:
+const employeeName = "Philip";
+const basicSalary = 60000;
+const transportAllowance = 8000;
+const performanceBonus = 5000;
+const taxRate = 0.10;
+
+
+Business requirements
+Your program must perform the following operations.
+
+1. Calculate gross salary
+
+Create a function called calculateGrossSalary() that accepts:
+- Basic salary
+- Transport allowance
+- Performance bonus
+It should return the gross salary.
+
+2. Calculate tax
+
+Create a function called calculateTax() that accepts gross salary and tax rate.
+
+It should return the tax amount.
+
+3. Calculate net salary
+
+Create a function called calculateNetSalary() that accepts gross salary and tax.
+
+It should return the net salary.
+
+4. Determine employee eligibility
+
+Create an arrow function called checkBonusEligibility().
+
+It should accept a performance score and return:
+- true if the score is 80 or above.
+- false if the score is below 80.
+Use this additional variable:
+const performanceScore = 85;
+
+
+5. Display the results
+
+Your program should display:
+- Employee name
+- Basic salary
+- Gross salary
+- Tax amount
+- Net salary
+- Bonus eligibility
+Additional requirements
+1. Use at least one function declaration.
+2. Use at least one function expression.
+3. Use at least one arrow function.
+4. Use parameters and arguments correctly.
+5. Use return to pass calculated values between functions.
+6. Use console.log() to display the final results.
+7. Avoid unnecessary global variables inside your functions.
+
+Expected output
+Employee: Philip
+Basic Salary: KSh 60000
+Gross Salary: KSh 73000
+Tax: KSh 7300
+Net Salary: KSh 65700
+Bonus Eligible: true
